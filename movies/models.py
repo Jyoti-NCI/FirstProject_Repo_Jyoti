@@ -8,6 +8,5 @@ class Movie(models.Model):
     release_date = models.DateTimeField('release date')
     genre = models.CharField(max_length=200)
     duration = models.FloatField()
-    
-def __str__(self):
-    return self.title +"-" + self.director
+    def __str__(self):
+        return self.title +"-" + self.director
