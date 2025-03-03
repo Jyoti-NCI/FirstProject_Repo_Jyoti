@@ -1,0 +1,27 @@
+<!-- blog/templates/blog/create.html -->
+<h1>Create New Blog</h1>
+<form method="post">
+    {% csrf_token %}
+    <div>
+        <label for="id_title">Title:</label>
+        {{ form.title }}
+    </div>
+    <div>
+        <label for="id_author">Author:</label>
+        {{ form.author }}
+    </div>
+    <div>
+        <label for="id_publish_date">Publish date:</label>
+        <input type="datetime-local" name="publish_date" id="id_publish_date" required>
+    </div>
+    <div>
+        <label for="id_blog_type">Blog type:</label>
+        {{ form.blog_type }}
+    </div>
+    <div>
+        <label for="id_content">Content:</label>
+        {{ form.content }}
+    </div>
+    <button type="submit">Create Blog</button>
+</form>
+<a href="{% url 'blog:index' %}">Back to Blog List</a>

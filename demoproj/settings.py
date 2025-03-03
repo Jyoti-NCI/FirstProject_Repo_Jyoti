@@ -31,6 +31,8 @@ ALLOWED_HOSTS = ['1bb12804efa248dab2df0f4510b6f35f.vfs.cloud9.eu-west-1.amazonaw
 # Application definition
 
 INSTALLED_APPS = [
+    'blog.apps.BlogConfig',
+    'users.apps.UsersConfig',
     'movies.apps.MoviesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -119,3 +121,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+LOGIN_REDIRECT_URL = '/'
+

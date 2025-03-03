@@ -1,8 +1,14 @@
+{% extends "movies/base_generic.html" %}
+{% block content %}
 <h2>{{movie.title}} Details</h2>
 <table>
 <thead>
 </thead>
 <tbody>
+<tr>
+<td><b>Index:</b></td>
+<td>{{movie.id}}</td>
+</tr>
 <tr>
 <td><b>Director:</b></td>
 <td>{{movie.director}}</td>
@@ -21,3 +27,4 @@
 </tr>
 </tbody>
 </table>
+{% endblock content %}
